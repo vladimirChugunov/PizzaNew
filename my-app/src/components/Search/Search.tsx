@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 // @ts-ignore
 import debounce from "lodash.debounce";
 import { useDispatch } from "react-redux";
@@ -40,7 +40,7 @@ const Search = () => {
         ref={inputEl}
         onChange={(e) => onChangeInput(e)}
         className={styles.input}
-        placeholder="Поиск"
+        placeholder=""
       />
       {value && (
         <img

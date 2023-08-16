@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import qs from "qs";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../redux/store";
@@ -16,7 +16,7 @@ import {
 import { fetchPizzas, selectPizza } from "../redux/slices/pizzasSlice";
 import { list } from "../components/Sort";
 
-const Home = () => {
+const Home: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const isSearch = useRef(false);

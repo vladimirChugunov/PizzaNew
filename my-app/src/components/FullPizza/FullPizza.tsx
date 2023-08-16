@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 
@@ -8,17 +8,6 @@ type PizzaType = {
   name: string;
   price: number;
 };
-
-// interface DataPizzaType {
-//   category: number;
-//   id: string;
-//   imageUrl: string;
-//   name: string;
-//   price: number;
-//   rating: number;
-//   sizes: number[];
-//   types: number[];
-// }
 
 const FullPizza: React.FC = () => {
   const { id } = useParams();
@@ -49,12 +38,11 @@ const FullPizza: React.FC = () => {
       <img src={pizza.imageUrl} />
       <h2>{pizza.name}</h2>
       <h4>{pizza.price}</h4>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo.
-      </p>
+      <Link to="/">
+        <button className="button button--outline button--add">
+          <span>Назад</span>
+        </button>
+      </Link>
     </div>
   );
 };
