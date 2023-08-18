@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import MainLayout from "./loyouts/MainLayout";
+import MainLayout from "./Layouts/MainLayout";
 
 const CartPage = React.lazy(
   () => import(/* webpackChunkName: "Cart" */ "./pages/Cart")
